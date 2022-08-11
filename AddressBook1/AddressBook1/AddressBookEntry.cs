@@ -17,7 +17,7 @@ namespace AddressBook
             addNew.FirstName = Console.ReadLine();
             Console.Write("Enter Your Last Name:");
             addNew.LastName = Console.ReadLine();
-            Console.Write("Enter Your Address");
+            Console.Write("Enter Your Address:");
             addNew.Address = Console.ReadLine();
             Console.Write("Enter Your City Name:");
             addNew.City = Console.ReadLine();
