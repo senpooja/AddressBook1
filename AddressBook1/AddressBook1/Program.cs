@@ -61,28 +61,26 @@
                     Last_Name = "Yadav ",
                     Address = "pitampura ",
                     City = "Delhi ",
-                    State = "Old Delhi ",
+                    State = "New Delhi ",
                     Email = "abc@xyz ",
                     zip = 110008,
                     Contact_num = 876565776
                 },
 
         };
-        //iterate the student by selecting the student Who live in Delhi using Lamda Function
-        IEnumerable<person> Query = Person.Where(s => s.City.Equals("Delhi "));
-        IEnumerable<person> Query1 = Person.Where(s => s.State.Equals("New Delhi "));
+        //iterate the student by selecting the student Whose name Starts with S using Where Function
+        IEnumerable<person> Query = Person.Where(s => s.City[0] == 'D');
+        IEnumerable<person> Query1 = Person.Where(s => s.State[0] == 'D');
 
         foreach (person e in Query1)
         {
             Console.WriteLine(e.ToString());
         }
-        Console.WriteLine("***************************");
         foreach (person e in Query)
         {
             Console.WriteLine(e.ToString());
         }
-        Console.WriteLine("***************************");
         //to check the number of entry in a list
-        Console.WriteLine($"{Person.Count} person are there in the list");
+        Console.WriteLine($"Initial count:{Person.Count} are person there in the list");
     }
 }
